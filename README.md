@@ -114,13 +114,14 @@ To repeat, each of the functions S1, S2,..., S8, takes a 6-bit block as input an
                              S1
 
                         Column Number
-Row
-No.    0  1   2  3   4  5   6  7   8  9  10 11  12 13  14 15
-
-  0   14  4  13  1   2 15  11  8   3 10   6 12   5  9   0  7
-  1    0 15   7  4  14  2  13  1  10  6  12 11   9  5   3  8
-  2    4  1  14  8  13  6   2 11  15 12   9  7   3 10   5  0
-  3   15 12   8  2   4  9   1  7   5 11   3 14  10  0   6 13
+            0  1   2  3   4  5   6  7   8  9  10 11  12 13  14 15
+    Row N.
+       0   14  4  13  1   2 15  11  8   3 10   6 12   5  9   0  7
+       1    0 15   7  4  14  2  13  1  10  6  12 11   9  5   3  8
+       2    4  1  14  8  13  6   2 11  15 12   9  7   3 10   5  0
+       3   15 12   8  2   4  9   1  7   5 11   3 14  10  0   6 13
+  
+  
 If S1 is the function defined in this table and B is a block of 6 bits, then S1(B) is determined as follows: The first and last bits of B represent in base 2 a number in the decimal range 0 to 3 (or binary 00 to 11). Let that number be i. The middle 4 bits of B represent in base 2 a number in the decimal range 0 to 15 (binary 0000 to 1111). Let that number be j. Look up in the table the number in the i-th row and j-th column. It is a number in the range 0 to 15 and is uniquely represented by a 4 bit block. That block is the output S1(B) of S1 for the input B. For example, for input block B = 011011 the first bit is "0" and the last bit "1" giving 01 as the row. This is row 1. The middle four bits are "1101". This is the binary equivalent of decimal 13, so the column is column number 13. In row 1, column 13 appears 5. This determines the output; 5 is binary 0101, so that the output is 0101. Hence S1(011011) = 0101.
 
 The tables defining the functions S1,...,S8 are the following:
